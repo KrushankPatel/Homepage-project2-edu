@@ -34,7 +34,7 @@ let showPosition = (data) => {
       t.style.padding = `6px`;
       t.style.marginRight = `1.5rem`
 
-      // Set the appropriate weather icon class based on the weather condition
+      
       let iconClass;
       if (iconCode.startsWith("01")) {
         iconClass = "wi-day-sunny";
@@ -52,7 +52,7 @@ let showPosition = (data) => {
         iconClass = "wi-day-sunny-overcast";
       }
 
-      // Add the appropriate weather icon class to the i element
+     
       let iconElement = document.getElementById('weather-icon');
       iconElement.className = `wi ${iconClass}`;
 
