@@ -576,7 +576,7 @@ html {
     right: -24px;
     background: #ecf0f3;
     font-size: larger;
-    top: 15px;
+    top: 30px;
     width: 20rem;
     padding: 3rem 0;
     text-align: center;
@@ -705,6 +705,54 @@ html {
     height: 100%;
 }
 
+/*<-- location -->*/
+
+.location {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color1);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 15px 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    direction: ltr;
+    -moz-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    gap: 6px;
+}
+
+/*<-- weather code -->*/
+.weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: wheat;
+    text-align: center;
+}
+
+
+.temp,
+.weather-desc {
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+
+.weather-icon {
+    padding: 0 7px;
+    font-size: 25px;
+    color: orange;
+}
+
+
 /* <!-- <--------------maincontent-----------------> */
 
 /* <-----------offer slider-----------> */
@@ -830,7 +878,6 @@ html {
 .button-button1:hover::before {
     filter: blur(20px);
 }
-
 
 /* <----------- TWO OFFER WINDOWS----------------> */
 
@@ -2036,7 +2083,20 @@ html {
     .searchbar {
         margin-top: 1rem;
     }
-
+    #menu.show {
+        display: block;
+        position: absolute;
+        right: -64px;
+        background: #ecf0f3;
+        font-size: larger;
+        top: 32px;
+        width: 20rem;
+        padding: 3rem 0;
+        text-align: center;
+        z-index: 9;
+        transition: all 1s ease;
+      }
+      
     /* <--------navbar3---------> */
 
     .nav3 {
@@ -3120,43 +3180,7 @@ html {
 }
 
 @media only screen and (min-width: 992px) and (max-width:1199px) {
-    * {
-        max-width: 1199px;
-        box-sizing: border-box;
-    }
 
-
-    .tooltip-Profile {
-        display: none;
-    }
-
-    .mobile-nav-div {
-        display: block;
-        position: relative;
-    }
-
-    .nav2 {
-        flex-wrap: wrap;
-    }
-
-    .nav2-Left {
-        flex-basis: 50%;
-        order: 1;
-    }
-
-    .nav2-Center {
-        flex-basis: 100%;
-        order: 3;
-        margin: 1rem 0 2rem 0;
-        justify-content: center;
-    }
-
-    .nav2-Right {
-        flex-basis: 50%;
-        order: 2;
-        justify-content: flex-end;
-        align-items: center;
-    }
 
     /*<------navbar3------> */
 
@@ -3559,7 +3583,79 @@ html {
     }
 }
 
+@media only screen and (min-width: 992px) and (max-width:1300px) {
 
+
+    .tooltip-Profile {
+        display: none;
+    }
+
+    .mobile-nav-div {
+        display: block;
+        position: relative;
+    }
+
+    .nav2 {
+        flex-wrap: wrap;
+    }
+
+    .nav2-Left {
+        flex-basis: 50%;
+        order: 1;
+    }
+
+    .nav2-Center {
+        flex-basis: 100%;
+        order: 3;
+        margin: 1rem 0 2rem 0;
+        justify-content: center;
+    }
+
+    .nav2-Right {
+        flex-basis: 50%;
+        order: 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width:1300px) {
+
+
+    .tooltip-Profile {
+        display: none;
+    }
+
+    .mobile-nav-div {
+        display: block;
+        position: relative;
+    }
+
+    .nav2 {
+        flex-wrap: wrap;
+    }
+
+    .nav2-Left {
+        flex-basis: 14%;
+        order: 1;
+    }
+
+    .nav2-Center {
+        flex-basis: 100%;
+        order: 3;
+        margin: 1rem 0 2rem 0;
+        justify-content: center;
+    }
+
+    .nav2-Right {
+        flex-basis: auto;
+        order: 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+}
 
 /*<---- coupon query  ---->*/
 @media (width <=750px) {
@@ -3610,5 +3706,23 @@ html {
         width: 80%;
         height: auto;
     }
+
+}
+
+@media (width <=650px) {
+    .nav2-Right {
+        flex-basis: 100%;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .nav2-Left {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-bottom: .6rem;
+    }
+    .navbar-brand {
+        font-size: 3.5em;
+      }
 
 }

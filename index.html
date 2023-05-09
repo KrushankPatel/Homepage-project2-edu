@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet'
         href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900|Material+Icons'>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" />
 
 
 
@@ -77,6 +79,19 @@
                     <li class="nav1-item disabled">
                         Call Us-+19045155959
                     </li>
+
+                    <!-- weather container -->
+                    <div class="weather-container" id="weather-cont">
+
+                        <div class="weather-icon">
+                            <i class="wi" id="weather-icon"></i>
+                        </div>
+
+                        <div class="weather-info">
+                            <div class="temp" id="temp"></div>
+                            <div class="weather-desc" id="weather-desc"></div>
+                        </div>
+                    </div>
                 </ul>
             </nav>
 
@@ -84,7 +99,6 @@
             <!---- nav2 ---->
 
             <nav class="nav2">
-
                 <div class="nav2-Left">
                     <a class="navbar-brand" href="index.html">GadgetHive</a>
                 </div>
@@ -103,6 +117,8 @@
                 </div>
 
                 <div class="nav2-Right">
+                    <div id="location"></div>
+
                     <!-- Profile -->
                     <div class="tooltip-Profile">
                         <div class="tooltip-div">
@@ -151,6 +167,7 @@
                             </i></a>
                         <span class="tooltiptext-shopping-cart">Cart</span>
                     </div>
+
 
                     <!-- mobile nav -->
                     <div class="mobile-nav-div ">
@@ -252,11 +269,6 @@
                 </div>
             </div>
 
-
-
-
-
-
             <!--- Offer Window --->
 
             <div class="container-Top-offerwindow inverted">
@@ -295,13 +307,22 @@
 
 
 
+            <div class="weather-container" id="weather-cont">
 
+                <div class="weather-icon">
+                    <i class="wi" id="weather-icon"></i>
+                </div>
+
+                <div class="weather-info">
+                    <div class="temp" id="temp"></div>
+                    <div class="weather-desc" id="weather-desc"></div>
+                </div>
+            </div>
 
 
             <!--- Features --->
 
             <div class="container-Features">
-
                 <div class="first-div">
                     <svg class="content-svg" preserveAspectRatio="xMidYMid meet" data-bbox="21 41.657 157.001 114.861"
                         viewBox="21 41.657 157.001 114.861" height="73" width="81" xmlns="http://www.w3.org/2000/svg"
@@ -963,7 +984,16 @@
     <!--====== Scripts ======-->
 
     <script> window.onload = loadCoupon() </script>
-    
+
+    <script> window.onload = () => {
+            setTimeout(() => {
+                geolocation();
+            }, 6000);
+        }
+    </script>
+
+    <script src="Javascript Common/weather.js"></script>
+
     <script src="Javascript Common/Dropdowns.js"></script>
 
     <script src="Javascript Common/navbar.js"></script>
